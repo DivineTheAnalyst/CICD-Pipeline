@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SONARQUBE_SERVER_URL = 'http://52.91.54.214:9000/'       // Replace with your SonarQube server URL
+        SONARQUBE_SERVER_URL = 'http://23.22.140.12:9000/'       // Replace with your SonarQube server URL
         SONARQUBE_TOKEN = credentials('SonarQube-Server')         // SonarQube authentication token from Jenkins credentials
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials') // Docker Hub credentials
         GIT_CREDENTIALS = credentials('github-credentials')                  // GitHub credentials
@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'github-credentials', url: 'https://github.com/Kavetec/CICD.git', branch: 'main'
+                git credentialsId: 'github-credentials', url: 'https://github.com/DivineTheAnalyst/CICD-Pipeline.git', branch: 'main'
             }
         }
 
