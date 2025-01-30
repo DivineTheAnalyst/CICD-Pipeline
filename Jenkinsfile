@@ -82,26 +82,24 @@ pipeline {
     }
 
     post {
-        always {
-            node('worker1') {
-                echo 'Pipeline completed.'
-                cleanWs() // Clean up the workspace after the pipeline runs
-            }
-        success {
-            emailext (
-                to: 'dnkwocha14@gmail.com',  // Replace with your actual email
-                subject: "Jenkins Pipeline Success: CICD-Pipeline",
-                body: "The Jenkins pipeline has successfully completed execution on worker-1.",
-                attachLog: true
-            )
-        }
-        failure {
-            emailext (
-                to: 'dnkwocha14@gmail.com',
-                subject: "Jenkins Pipeline Failure: CICD-Pipeline",
-                body: "The Jenkins pipeline failed on worker-1. Please check the logs for details.",
-                attachLog: true
-            )
-        }   
+    always {
+        echo 'Pipeline completed.'
+        cleanWs()
+    }
+    success {
+        emailext (
+            to: 'dnkwocha14@gmail.com',
+            subject: "Jenkins Pipeline Success: CICD-Pipeline",
+            body: "The Jenkins pipeline has successfully completed execution on worker1.",
+            attachLog: true
+        )
+    }
+    failure {
+        emailext (
+            to: 'dnkwocha14@gmail.com',
+            subject: "Jenkins Pipeline Failure: CICD-Pipeline",
+            body: "The Jenkins pipeline failed on worker1. Please check the logs for details.",
+            attachLog: true
+        )
     }
 }
