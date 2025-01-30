@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: isaackavetec/web:latest
+        image: ijeawele/web:latest
         ports:
         - containerPort: 80
         env:
