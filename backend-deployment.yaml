@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: isaackavetec/api:latest
+        image: ijeawele/api:latest
         ports:
         - containerPort: 5000
         command: ["python"]
