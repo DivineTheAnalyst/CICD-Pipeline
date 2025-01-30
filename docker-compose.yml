@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: ./web
-    image: isaackavetec/web:latest
+    image: ijeawele/web:latest
     ports:
       - "80:80"
     depends_on:
@@ -10,7 +10,7 @@ services:
 
   api:
     build: ./api
-    image: isaackavetec/api:latest
+    image: ijeawele/api:latest
     ports:
       - "5000:5000"
     depends_on:
