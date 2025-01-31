@@ -79,28 +79,17 @@ pipeline {
                 }
             }
         }
-    }
-
+        stage('Email Notification'){
+           steps{
+               emailext body: 'The Jenkins pipeline has successfully completed execution on worker1..', subject: 'Jenkins Pipeline Success: CICD-Pipeline', to: 'dnkwocha14@gmail.com'
+        }
+        }
     post {
         always {
             echo 'Pipeline completed.'
             cleanWs()
         }
-        success {
-            emailext (
-                to: 'dnkwocha14@gmail.com',
-                subject: "Jenkins Pipeline Success: CICD-Pipeline",
-                body: "The Jenkins pipeline has successfully completed execution on worker1..",
-                attachLog: true
-            )
-        }
-        failure {
-            emailext (
-                to: 'dnkwocha14@gmail.com',
-                subject: "Jenkins Pipeline Failure: CICD-Pipeline",
-                body: "The Jenkins pipeline failed on worker1. Please check the logs for details.",
-                attachLog: true
-            )
-        }
+
     }
 }  
+}
