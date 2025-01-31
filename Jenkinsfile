@@ -90,7 +90,7 @@ pipeline {
             emailext (
                 to: 'dnkwocha14@gmail.com',
                 subject: "Jenkins Pipeline Success: CICD-Pipeline",
-                body: "The Jenkins pipeline has successfully completed execution on worker1.",
+                body: "The Jenkins pipeline has successfully completed execution on worker1..",
                 attachLog: true
             )
         }
