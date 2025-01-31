@@ -84,12 +84,12 @@ pipeline {
                emailext body: 'The Jenkins pipeline has successfully completed execution on worker1..', subject: 'Jenkins Pipeline Success: CICD-Pipeline', to: 'dnkwocha14@gmail.com'
         }
         }
+    }
     post {
         always {
             echo 'Pipeline completed.'
             cleanWs()
         }
 
-    }
-}  
+    }  
 }
