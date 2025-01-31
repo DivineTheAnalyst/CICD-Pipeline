@@ -4,7 +4,7 @@ pipeline {
   }
 
     environment {
-        SONARQUBE_SERVER_URL = 'http://3.87.237.26:9000/'       // Replace with your SonarQube server URL
+        SONARQUBE_SERVER_URL = 'http://54.221.50.184:9000/'       // Replace with your SonarQube server URL
         SONARQUBE_TOKEN = credentials('SonarQube-Server')         // SonarQube authentication token from Jenkins credentials
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credential') // Docker Hub credentials
         GIT_CREDENTIALS = credentials('github-credentials')                  // GitHub credentials
@@ -24,7 +24,7 @@ pipeline {
                         sh """
                         echo Running SonarQube Analysis with CLI...
                         /opt/sonar-scanner/bin/sonar-scanner \
-                          -Dsonar.projectKey=Project-2 \
+                          -Dsonar.projectKey=Project1 \
                           -Dsonar.sources=api,web \
                           -Dsonar.host.url=${SONARQUBE_SERVER_URL} \
                           -Dsonar.login=$SONAR_LOGIN \
