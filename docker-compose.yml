@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: ./web
-    image: ijeawele/web:latest
+    image: ijeawele/web:latest2
     ports:
       - "80:80"
     depends_on:
@@ -10,14 +10,14 @@ services:
 
   api:
     build: ./api
-    image: ijeawele/api:latest
+    image: ijeawele/api:latest2
     ports:
       - "5000:5000"
     depends_on:
       - database
 
   database:
-    image: mysql:latest
+    image: mysql:latest2
     environment:
       MYSQL_ROOT_PASSWORD: examplepassword
       MYSQL_DATABASE: mydb
