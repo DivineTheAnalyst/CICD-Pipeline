@@ -4,7 +4,7 @@ pipeline {
   }
 
     environment {
-        SONARQUBE_SERVER_URL = 'http://23.22.140.12:9000/'       // Replace with your SonarQube server URL
+        SONARQUBE_SERVER_URL = 'http://3.87.237.26:9000/'       // Replace with your SonarQube server URL
         SONARQUBE_TOKEN = credentials('SonarQube-Server')         // SonarQube authentication token from Jenkins credentials
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credential') // Docker Hub credentials
         GIT_CREDENTIALS = credentials('github-credentials')                  // GitHub credentials
