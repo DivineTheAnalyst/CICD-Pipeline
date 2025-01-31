@@ -81,7 +81,7 @@ pipeline {
         }
         stage('Email Notification'){
            steps{
-               emailext body: 'The Jenkins pipeline has successfully completed execution on worker1..', subject: 'Jenkins Pipeline Success: CICD-Pipeline', to: 'dnkwocha14@gmail.com'
+               emailext body: 'The Jenkins pipeline has successfully completed execution on worker1!..', subject: 'Jenkins Pipeline Success: CICD-Pipeline', to: 'dnkwocha14@gmail.com'
         }
         }
     }
