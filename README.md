@@ -1,6 +1,6 @@
 # CI/CD Pipeline Repository
 
-Welcome to the **my CI/CD** repository! This project is designed to demonstrate the implementation of a Continuous Integration and Continuous Deployment (CI/CD) pipeline using Jenkins, Docker, SonarQube, and Kubernetes.
+Welcome to **my CI/CD** repository! This project is designed to demonstrate the implementation of a Continuous Integration and Continuous Deployment (CI/CD) pipeline using Jenkins, Docker, SonarQube, and Kubernetes.
 
 ## 📌 Repository Overview
 
